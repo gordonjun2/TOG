@@ -242,6 +242,13 @@ class YOLOv3_Darknet53(YOLOv3):
         super().__init__(weights, yolo_darknet53,
                          model_img_size, confidence_thresh_default, confidence_thresh_eval)
 
+class YOLOv3_Darknet53_MSTAR(YOLOv3):
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+    def __init__(self, weights, model_img_size=(416, 416), confidence_thresh_default=0.20, confidence_thresh_eval=0.01):
+        super().__init__(weights, yolo_darknet53,
+                         model_img_size, confidence_thresh_default, confidence_thresh_eval)
+
 
 class YOLOv3_MobileNetV1(YOLOv3):
     classes = ['aeroplane', 'bicycle', 'bird', 'boat', 'bottle', 'bus', 'car', 'cat', 'chair', 'cow', 'diningtable',
