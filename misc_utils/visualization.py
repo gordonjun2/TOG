@@ -1,11 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from skimage.io import imread, imsave
 
 
 def visualize_detections(detections_dict):
     colors = plt.cm.hsv(np.linspace(0, 1, 21)).tolist()
     plt.clf()
-    plt.figure(figsize=(3 * len(detections_dict), 3))
+    #plt.figure(figsize=(3 * len(detections_dict), 3))
     for pid, title in enumerate(detections_dict.keys()):
         input_img, detections, model_img_size, classes = detections_dict[title]
         if len(input_img.shape) == 4:
@@ -13,6 +14,8 @@ def visualize_detections(detections_dict):
         plt.subplot(1, len(detections_dict), pid + 1)
         plt.title(title)
         plt.imshow(input_img)
+        img_title = title + '.png'
+        imsave(img_title, input_img)
         current_axis = plt.gca()
         for box in detections:
             xmin = max(int(box[-4] * input_img.shape[1] / model_img_size[1]), 0)
