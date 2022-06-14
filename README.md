@@ -1,3 +1,9 @@
+## NOTE
+
+Please clone [keras-yolo3](https://github.com/gordonjun2/keras-yolo3) and put the folder together with TOG (beside, not inside).
+
+Download the necessary datasets and place them in the correct file (approach me).
+
 ## Introduction
 ![](assets/showcase.png)
 
