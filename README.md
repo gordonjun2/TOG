@@ -1,8 +1,16 @@
-## NOTE
+## NOTE by Gordon
 
 Please clone [keras-yolo3](https://github.com/gordonjun2/keras-yolo3) and put the folder together with TOG (beside, not inside).
 
-Download the necessary datasets and place them in the correct file (approach me).
+Download the necessary datasets and place them in the correct file.
+
+The pretrained YOLOv3 for this code can be downloaded from [here](https://drive.google.com/file/d/13URG-PPFAyOnUn2o25NVXfx7jn7QWnCM/view?usp=sharing). Place the file in 
+
+```./TOG/model_weights/yolov3-d/```.
+
+To run the demo on SAR image, run
+
+```python demo_yolov3-d_mstar.py```.
 
 ## Introduction
 ![](assets/showcase.png)
